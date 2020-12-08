@@ -16,6 +16,6 @@ app.use('/admin/queues', BullBoard.UI);
 
 Queue.process(); 
 
-app.listen(3333, () => {
+app.listen("https://mail-redis-backend.herokuapp.com/", () => {
   console.log('Server running on localhost:3333');
 });
