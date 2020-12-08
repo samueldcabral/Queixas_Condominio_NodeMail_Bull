@@ -11,10 +11,16 @@ export default {
     };
 
     // Adicionar job RegistrationMail na fila
-    await Queue.add('RegistrationMail', { user });
+    try {
+      
+      await Queue.add('RegistrationMail', { user });
+      // await Queue.add('UserReport', { user });
 
-    await Queue.add('UserReport', { user });
-
+    } catch (error) {
+      console.log("Erro aconteceu")
+      console.log(error)
+    }
+   
     return res.json(user);
   }
 };
