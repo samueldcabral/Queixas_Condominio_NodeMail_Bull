@@ -1,6 +1,6 @@
-import Mail from '../lib/Mail';
+const Mail = require('../lib/Mail');
 
-export default {
+const RegistrationMail = {
   key: 'RegistrationMail',
   async handle({ data }) {
     const { user } = data;
@@ -13,3 +13,5 @@ export default {
     });
   },
 };
+
+module.exports = RegistrationMail

@@ -1,4 +1,8 @@
-export default {
+// export default {
+  
+// };
+
+const UserReport = {
   key: 'UserReport',
   options: {
     delay: 5000,
@@ -8,4 +12,6 @@ export default {
 
     console.log(user);
   },
-};
+}
+
+module.exports = UserReport;

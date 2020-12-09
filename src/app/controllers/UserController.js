@@ -1,6 +1,6 @@
-import Queue from '../lib/Queue';
+const Queue = require('../lib/Queue');
 
-export default {
+const UserController = {
   async store(req, res) {
     const { name, email, password } = req.body;
 
@@ -24,3 +24,5 @@ export default {
     return res.json(user);
   }
 };
+
+module.exports = UserController;

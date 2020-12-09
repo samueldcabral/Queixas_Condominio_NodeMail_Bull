@@ -7,11 +7,18 @@
 //   },
 // };
 
-export default {
+// export default {
+
+// };
+
+
+const mail = {
   host: "smtp.mailtrap.io",
   port: "2525",
   auth: {
     user: "487dd65d7ae706",
     pass: "7814379c7a85f2"
   },
-};
+}
+
+module.exports = mail;
