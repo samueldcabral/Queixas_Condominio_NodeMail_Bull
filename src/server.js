@@ -10,12 +10,17 @@ BullBoard.setQueues(Queue.queues.map(queue => queue.bull));
 
 app.use(express.json());
 app.post('/users', UserController.store);
-app.post('/test', TestController.test)
+
+app.get("/test", (req, res) => {
+  res.json({
+    message: "It worked."
+  })
+})
 
 app.use('/admin/queues', BullBoard.UI);
 
 Queue.process(); 
 
-app.listen("https://mail-redis-backend.herokuapp.com/", () => {
+app.listen("3333", () => {
   console.log('Server running on localhost:3333');
 });
