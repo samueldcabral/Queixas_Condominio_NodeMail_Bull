@@ -3,13 +3,19 @@ const Mail = require('../lib/Mail');
 const RegistrationMail = {
   key: 'RegistrationMail',
   async handle({ data }) {
-    const { user } = data;
+    const { mailData } = data;
 
     await Mail.sendMail({
-      from: 'Queue Test <queue@queuetest.com.br>',
-      to: `${user.name} <${user.email}>`,
-      subject: 'Cadastro de usuário',
-      html: `Olá, ${user.name}, bem-vindo ao sistema de filas da Rocketseat :D`
+      from: `Queixa de Condomínio <admin@queixadecondominio.ga>`,
+      to: `${mailData.nome} <${mailData.email}>`,
+      subject: 'Atualização referente a sua queixa',
+      html: `
+      Olá, ${mailData.nome}! 
+      <br/>A sua denúncia <strong>#${mailData.queixa_id}</strong> teve uma alteração!
+      <br/>O seu status é ${mailData.queixa_status}
+      <br/>Descrição: ${mailData.queixa_descricao}
+      <br/>Mais informações no site <a>http://www.queixadecondominio.ga</a>
+      `
     });
   },
 };
