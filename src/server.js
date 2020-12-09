@@ -5,6 +5,7 @@ const UserController = require('./app/controllers/UserController');
 const BullBoard = require('bull-board');
 const QueueEx = require('./app/lib/Queue');
 
+const PORT = process.env.PORT || '3333'
 const app = express();
 BullBoard.setQueues(QueueEx.queues.map(queue => queue.bull));
 
@@ -21,6 +22,6 @@ app.use('/admin/queues', BullBoard.UI);
 
 QueueEx.process(); 
 
-app.listen("3333", () => {
-  console.log('Server running on localhost:3333');
+app.listen(PORT, () => {
+  console.log('Server running on localhost:' + PORT);
 });
