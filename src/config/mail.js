@@ -1,17 +1,4 @@
-// export default {
-//   host: process.env.MAIL_HOST,
-//   port: process.env.MAIL_PORT,
-//   auth: {
-//     user: process.env.MAIL_USER,
-//     pass: process.env.MAIL_PASS
-//   },
-// };
-
-// export default {
-
-// };
-
-
+//Caixa de Email de Samuel no https://mailtrap.io/
 const mail = {
   host: "smtp.mailtrap.io",
   port: "2525",
@@ -20,5 +7,15 @@ const mail = {
     pass: "7814379c7a85f2"
   },
 }
+
+//Caixa de Email de Raimundo no https://mailtrap.io/
+// const mail = {
+//   host: "smtp.mailtrap.io",
+//   port: "2525",
+//   auth: {
+//     user: "49d58f45559090",
+//     pass: "97dcd9196011d8"
+//   },
+// }
 
 module.exports = mail;
