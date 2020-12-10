@@ -1,4 +1,4 @@
-// //Caixa de Email de Samuel no https://mailtrap.io/
+//Caixa de Email de Samuel no https://mailtrap.io/
 // const mail = {
 //   host: "smtp.mailtrap.io",
 //   port: "2525",

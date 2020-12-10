@@ -8,7 +8,7 @@ const RegistrationMail = {
     await Mail.sendMail({
       from: `Queixa de Condomínio <admin@queixadecondominio.ga>`,
       to: `${mailData.nome} <${mailData.email}>`,
-      subject: 'Atualização referente a sua queixa',
+      subject: `${mailData.newSubject}`,
       html: `
       Olá, ${mailData.nome}! 
       <br/>A sua denúncia <strong>#${mailData.queixa_id}</strong> teve uma alteração!
