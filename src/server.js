@@ -15,7 +15,7 @@ app.post('/mail', MailController.store);
 
 app.get("/test", (req, res) => {
   res.json({
-    message: "It worked."
+    message: "This is a test."
   })
 })
 
